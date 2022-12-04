@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://static.airtable.com/html/drift_widget.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content=" base-uri &#39;none&#39; ; object-src &#39;none&#39; ; default-src https: wss: ; script-src https: &#39;unsafe-inline&#39; ; style-src https: &#39;unsafe-inline&#39; ; form-action https: ; frame-src https: ; img-src https: data: ; block-all-mixed-content " http-equiv="Content-Security-Policy">
+<title>Drift Widget - Airtable</title>
+<style type="text/css">body,html{width:100%;height:100%;margin:0;padding:0;overflow:hidden}</style>
+<script type="text/javascript">!function(){const t=Object.freeze(["https://www.airtable.com","https://airtable.com"]);function e(){window.drift&&window.drift.hasInitialized?window.drift.apply(window.drift,Array.prototype.slice.call(arguments)):console.error("Drift not initialized yet, send `init` message first!")}window.addEventListener("message",function(i){if(t.indexOf(i.origin)<0)return;if(i.data)try{if(void 0!==("object"==typeof i.data?i.data:JSON.parse(i.data)).__fs)return}catch(t){console.warn("expected message to be fullstory.js message, but event data is not valid JSON",i.data)}const n=i.data.kind,o=i.data.data;switch(n){case"init":!function(t,e){if(void 0!==window.driftSettings)return void console.warn("Ignoring drift widget re-initialization");if(!e||"object"!=typeof e)return void console.error("Invalid Drift settings received; must be a plain object. Got: ",e);window.driftSettings=e;const i=document.createElement("script");i.id="drift-snippet",i.type="text/javascript",i.async=!0,i.src="https://js.driftt.com/conductor",i.addEventListener("load",function(){window.drift=window.drift||function(){(drift.q=drift.q||[]).push(arguments)},drift("config",{iframeMode:!0,iframeSandbox:"allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"}),drift("init",e.appId),drift("on","ready",function(i){drift("on","message",function(e){i.widget.show(),setTimeout(function(){window.parent.postMessage({kind:"driftShow"},t),window.parent.postMessage({kind:"driftMessageReceived"},t)},1e3)}),drift("on","startConversation",function(e){i.widget.show(),setTimeout(function(){window.parent.postMessage({kind:"driftShow"},t),window.parent.postMessage({kind:"driftStartConversation"},t)},1e3)}),drift("on","conversation:playbookFired",function(e){i.widget.show(),setTimeout(function(){window.parent.postMessage({kind:"driftShow"},t),window.parent.postMessage({kind:"driftPlaybookFired"},t)},1e3)}),drift("on","chatClose",function(e){window.parent.postMessage({kind:"driftMinimize"},t)}),drift("on","chatOpen",function(e){window.parent.postMessage({kind:"driftChatOpen"},t)}),drift("on","message:sent",function(e){window.parent.postMessage({kind:"driftMessageSent"},t)}),void 0!==e.userId&&drift("identify",e.userId,{name:e.name||"",email:e.email||"",userId:e.userId},{userJwt:e.identityJwt});const n=document.getElementById("drift-frame-chat");n&&n.style&&(n.style.height="90%")}),window.parent.postMessage({kind:"driftIframeReady"},t)}),document.head.appendChild(i)}(i.origin,o.driftSettings);break;case"driftSetContext":e("setContext",o);break;case"recordPageView":e("page");break;case"logOut":e("reset");break;default:console.error("Unrecognized message '"+n+"'",i)}})}();</script>
+<script id="drift-snippet" type="text/javascript" async="" src="./conductor"></script><style type="text/css">.drift-conductor-item iframe,
+.drift-frame-controller {
+  display: block;
+  min-width: 0;
+  max-width: none;
+  min-height: 0;
+  max-height: none;
+}
+
+.drift-conductor-item iframe {
+  border: none !important;
+  background: transparent !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+}
+
+.drift-conductor-item.with-transition {
+  -webkit-transition: opacity .5s ease, -webkit-transform .5s ease;
+  transition: opacity .5s ease, -webkit-transform .5s ease;
+  -o-transition: opacity .5s ease, -o-transform .5s ease;
+  -moz-transition: opacity .5s ease, transform .5s ease, -moz-transform .5s ease;
+  transition: opacity .5s ease, transform .5s ease;
+  transition: opacity .5s ease, transform .5s ease, -webkit-transform .5s ease, -moz-transform .5s ease, -o-transform .5s ease;
+}
+
+.drift-frame-chat.with-transition.drift-frame-chat__takeover {
+  -webkit-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  -moz-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.drift-conductor-item.with-height-transition {
+  -webkit-transition: max-height .5s ease, opacity .5s ease, -webkit-transform .5s ease;
+  transition: max-height .5s ease, opacity .5s ease, -webkit-transform .5s ease;
+  -o-transition: max-height .5s ease, opacity .5s ease, -o-transform .5s ease;
+  -moz-transition: max-height .5s ease, opacity .5s ease, transform .5s ease, -moz-transform .5s ease;
+  transition: max-height .5s ease, opacity .5s ease, transform .5s ease;
+  transition: max-height .5s ease, opacity .5s ease, transform .5s ease, -webkit-transform .5s ease, -moz-transform .5s ease, -o-transform .5s ease;
+}
+
+.drift-conductor-item {
+  -webkit-transform: translateZ(0);
+     -moz-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.drift-frame-controller {
+  bottom: 24px;
+}
+
+.drift-frame-controller-align-left {
+  left: 24px;
+}
+
+.drift-frame-controller-align-right {
+  right: 24px;
+}
+
+.drift-frame-chat:not(iframe) {
+  bottom: -webkit-calc(12px + 52px + 24px);
+  bottom: -moz-calc(12px + 52px + 24px);
+  bottom: calc(12px + 52px + 24px); /* vertical margin x 2 + widget icon size*/
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  opacity: 0;
+  visibility: hidden;
+
+  -webkit-transform: translateY(88px);
+
+     -moz-transform: translateY(88px);
+
+      -ms-transform: translateY(88px);
+
+       -o-transform: translateY(88px);
+
+          transform: translateY(88px);
+}
+
+.drift-frame-chat:not(iframe).drift-chat-open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.drift-frame-chat.drift-frame-chat__takeover:not(iframe):not(.drift-frame--mobile) {
+  min-width: 600px;
+}
+
+.drift-frame-chat-align-left {
+  left: 12px;
+}
+
+.drift-frame-chat-align-right {
+  right: 12px;
+}
+
+.drift-frame-takeover,
+.drift-frame-landingPage,
+.drift-frame-chat__takeover {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.drift-frame-chat__takeover.hide-frame {
+  visibility: hidden;
+}
+
+.drift-frame-emailCapture {
+  bottom: 0;
+  height: -webkit-calc(100% + 30px);
+  height: -moz-calc(100% + 30px);
+  height: calc(100% + 30px);
+}
+
+.drift-frame-emailCapture-align-left {
+  left: 0;
+}
+
+.drift-frame-emailCapture-align-right {
+  right: 0;
+}
+
+.drift-frame-slider {
+  bottom: 18px;
+  height: -webkit-calc(100% + 20px);
+  height: -moz-calc(100% + 20px);
+  height: calc(100% + 20px);
+}
+
+.drift-frame-slider-align-left {
+  left: 96px;
+}
+
+.drift-frame-slider-align-right {
+  right: 96px;
+}
+
+.drift-frame--mobile.drift-frame-slider-align-left {
+  left: 68px;
+}
+
+.drift-frame--mobile.drift-frame-slider-align-right {
+  right: 68px;
+}
+
+.drift-widget-content-box {
+  background: rgba(0,0,0,.5);
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  z-index: 2147483647;
+  top: 0;
+  left: 0;
+}
+
+.drift-widget-content-box > * {
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-height: 80%;
+
+}
+
+@media
+(max-height: 685px),
+(min-width: 369px) and (max-width: 380px),
+(max-width: 367px),
+
+(min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait)
+
+{
+  .drift-frame--mobile.drift-frame-chat.drift-chat-open {
+    bottom: 0 !important;
+    right: 0;
+    left: 0;
+    z-index: 2147483647 !important;
+  }
+
+  .drift-frame--mobile.drift-frame-controller {
+    bottom: 0;
+  }
+
+  .drift-frame--mobile.drift-frame-controller.drift-frame-controller-align-left {
+    left: 0;
+  }
+
+  .drift-frame--mobile.drift-frame-controller.drift-frame-controller-align-right {
+    right: 0;
+  }
+
+
+  .drift-frame--mobile.drift-frame-controller.drift-chat-open {
+    display: none;
+  }
+
+  .drift-frame--mobile.drift-frame-slider {
+    bottom: 0;
+    max-width: 320px;
+  }
+
+  .drift-frame--mobile iframe.drift-frame-chat {
+    width: 1px !important;
+    min-width: 100%;
+
+    height: 1px !important;
+    min-height: 100%;
+  }
+
+  html.drift-widget-parent--chat-open,
+  html.drift-widget-parent--chat-open > body {
+    height: 100vh !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    position: static !important;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .drift-frame--mobile.drift-frame-controller.drift-chat-open {
+    display: none;
+  }
+
+  .drift-frame--mobile.drift-frame-controller {
+    bottom: 0;
+  }
+
+  .drift-frame--mobile.drift-frame-controller-align-right {
+    right: 0;
+  }
+
+  .drift-frame--mobile.drift-frame-controller-align-left {
+    left: 0;
+  }
+}
+
+.drift-frame-chat.widget--xs.drift-chat-open {
+  bottom: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+}
+
+.drift-frame-controller.widget--xs.drift-chat-open {
+  display: none;
+}
+
+</style><script charset="utf-8" src="./4.3b34b074.chunk.js.download"></script></head>
+<body>
+<div id="drift-frame-chat" class="drift-conductor-item drift-frame-chat drift-frame-chat-align-right with-transition widget--xs drift-has-chat" style="right: -12px; width: 364px !important; max-width: none; position: fixed; z-index: 2147483647; max-height: 0px; bottom: 88px; visibility: hidden; min-width: 320px; height: 90%; opacity: 0;" aria-hidden="true" tabindex="-1"><iframe class="drift-frame-chat" scrolling="no" title="Drift Widget Chat Window" allow="autoplay; encrypted-media; fullscreen;" frameborder="0" src="./chat.html" style="background: transparent; width: 364px !important; max-width: 100%; height: 100%; border: none;" aria-hidden="true" tabindex="-1"></iframe></div><div id="drift-frame-controller" class="drift-conductor-item drift-frame-controller drift-frame-controller-align-right widget--xs drift-has-chat" style="right: 0px; width: 359.956px; max-width: none; position: fixed; z-index: 2147483647; height: 99.9375px; bottom: 0px;"><iframe class="drift-frame-controller" scrolling="no" title="Drift Widget Chat Controller" allow="autoplay; encrypted-media; fullscreen;" frameborder="0" src="./core.html" style="background: transparent; width: 359.956px; max-width: 100%; height: 99.9375px; border: none;"></iframe></div></body></html>

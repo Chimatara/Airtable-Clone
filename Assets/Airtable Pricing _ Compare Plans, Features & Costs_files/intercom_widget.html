@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://static.airtable.com/html/intercom_widget.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content=" base-uri &#39;none&#39; ; object-src &#39;none&#39; ; default-src https: wss: ; script-src https: &#39;unsafe-inline&#39; ; style-src https: &#39;unsafe-inline&#39; ; form-action https: ; frame-src https: ; img-src https: data: ; block-all-mixed-content " http-equiv="Content-Security-Policy">
+<title>Intercom Widget - Airtable</title>
+<style type="text/css">body,html{width:100%;height:100%;margin:0;padding:0;overflow:hidden}.intercom-namespace div:empty{opacity:0}</style>
+<script type="text/javascript" async="" src="./wb1whb4b"></script><script type="text/javascript">!function(){const t=Object.freeze(["https://www.airtable.com","https://airtable.com"]),e=Object.freeze(["afterprint","animationend","animationiteration","animationstart","beforeprint","input","mousedown","mouseover","mouseup","readystatechange","resize","touchcancel","touchend","touchstart","transitionend","transitioniteration","transitionstart","webkitAnimationEnd","webkitAnimationIteration","webkitAnimationStart","webkitTransitionEnd","webkitTransitionIteration","webkitTransitionStart"]),n=Object.freeze({passive:!0});function i(){window.Intercom?window.Intercom.apply(window.Intercom,Array.prototype.slice.call(arguments)):console.error("Intercom not initialized yet, send `init` message first!")}function o(t,o){if(void 0!==window.intercomSettings)return void console.warn("Ignoring Intercom re-initialization");if(!o||"object"!=typeof o)return void console.error("Invalid Intercom settings received; must be a plain object. Got:",o);if("string"!=typeof o.app_id)return void console.error("Invalid Intercom settings received; must contain a string `app_id` property. Got:",o);window.intercomSettings=o,function(){var t=window,e=t.Intercom;if("function"==typeof e)e("reattach_activator"),e("update",t.intercomSettings);else{var n=document,i=function(){i.c(arguments)};i.q=[],i.c=function(t){i.q.push(t)},t.Intercom=i;var r=n.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://widget.intercom.io/widget/"+o.app_id;var a=n.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a)}}();const r=function(e,n){n=void 0!==n?n:{},window.parent.postMessage({kind:e,data:n},t)};document.body.addEventListener("click",function(t){t.target===t.currentTarget&&(i("hide"),r("hide"))});let a=null;const c=function(t){let e=null;function n(){e=null,t.call(null)}return function(){e||(n(),e=setTimeout(n,16))}}(function(){const t=function(){let t=1/0,e=1/0,n=-1/0,i=-1/0;const o=document.body.querySelectorAll("*");for(let r=0;r<o.length;r++){const a=o[r],c=window.getComputedStyle(a);if("none"===c.display||"hidden"===c.visibility||parseFloat(c.opacity)<=.001)continue;const s=a.getBoundingClientRect();if(s.width<.5||s.height<.5)continue;if(s.width*s.height<=10)continue;s.left<t&&(t=s.left),s.top<e&&(e=s.top);const d=s.left+s.width,u=s.top+s.height;d>n&&(n=d),u>i&&(i=u)}return{topLeftX:t=Math.round(t===1/0?0:t),topLeftY:e=Math.round(e===1/0?0:e),bottomRightX:n=Math.round(n===-1/0?0:n),bottomRightY:i=Math.round(i===-1/0?0:i),width:n-t,height:i-e}}();if(null!==a){const e=Object.keys(a);let n=!1;for(let i=0;i<e.length;i++){const o=e[i];if(a[o]!==t[o]){n=!0;break}}if(!n)return}a=t,t.width*t.height<=10?r("hide"):r("show"),r("resize",{rect:t})});e.forEach(function(t){window.addEventListener(t,c,n)});const s=new MutationObserver(c);return s.observe(document.body,{attributes:!0,characterData:!0,childList:!0,subtree:!0}),i("onShow",c),i("onHide",c),c(),function(){s.disconnect(),e.forEach(function(t){window.removeEventListener(t,c,n)})}}let r=null;window.addEventListener("message",function(e){if(t.indexOf(e.origin)<0)return;if(e.data)try{if(void 0!==JSON.parse(e.data).__fs)return}catch(t){}const n=e.data.kind,a=e.data.data;switch(n){case"init":r=o(e.origin,a.intercomSettings);break;case"show":i("show");break;case"logOut":null!==r&&r(),i("shutdown");break;case"recordPageView":const t=a.location;window.history.replaceState(null,"",t.pathname),i("update");break;default:console.error("Unrecognized message '"+n+"'")}})}();</script>
+</head>
+<body>
+
+<iframe id="intercom-frame" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;" aria-hidden="true" tabindex="-1" title="Intercom" src="./saved_resource.html"></iframe><div class="intercom-lightweight-app"><style id="intercom-lightweight-app-style" type="text/css">
+  @keyframes intercom-lightweight-app-launcher {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes intercom-lightweight-app-gradient {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes intercom-lightweight-app-messenger {
+    
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
+  }
+
+  .intercom-lightweight-app {
+    position: fixed;
+    z-index: 2147483001;
+    width: 0;
+    height: 0;
+    font-family: intercom-font, "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
+  }
+
+  .intercom-lightweight-app-gradient {
+    position: fixed;
+    z-index: 2147483002;
+    width: 500px;
+    height: 500px;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse at bottom right,
+      rgba(29, 39, 54, 0.16) 0%,
+      rgba(29, 39, 54, 0) 72%);
+    animation: intercom-lightweight-app-gradient 200ms ease-out;
+  }
+
+  .intercom-lightweight-app-launcher {
+    position: fixed;
+    z-index: 2147483003;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none;
+    bottom: 20px;
+    right: 20px;
+    max-width: 60px;
+    width: 60px;
+    max-height: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #158be6;
+    cursor: pointer;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);
+    transition: transform 167ms cubic-bezier(0.33, 0.00, 0.00, 1.00);
+    box-sizing: content-box;
+  }
+
+  
+
+
+  .intercom-lightweight-app-launcher:focus {
+    outline: none;
+
+    
+  }
+
+  .intercom-lightweight-app-launcher-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    transition: transform 100ms linear, opacity 80ms linear;
+  }
+
+  .intercom-lightweight-app-launcher-icon-open {
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-open svg {
+    width: 28px;
+    height: 32px;
+  }
+
+  .intercom-lightweight-app-launcher-icon-open svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve {
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve svg {
+    height: 56px;
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-launcher-custom-icon-open {
+    max-height: 36px;
+    max-width: 36px;
+
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-minimize {
+    
+        opacity: 0;
+        transform: rotate(-60deg) scale(0);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-minimize svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-messenger {
+    position: fixed;
+    z-index: 2147483003;
+    overflow: hidden;
+    background-color: white;
+    animation: intercom-lightweight-app-messenger 250ms cubic-bezier(0, 1.2, 1, 1);
+    transform-origin: bottom right;
+    
+        width: 376px;
+        height: calc(100% - 40px);
+        max-height: 704px;
+        min-height: 250px;
+        right: 20px;
+        bottom: 20px;
+        box-shadow: 0 5px 40px rgba(0,0,0,0.16);
+      
+    border-radius: 8px;
+  }
+
+  .intercom-lightweight-app-messenger-header {
+    height: 75px;
+    background: linear-gradient(
+          135deg,
+          rgb(21, 139, 230) 0%,
+          rgb(12, 82, 137) 100%
+        );
+  }
+
+  .intercom-lightweight-app-messenger-footer{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    min-height: 81px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 21px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+  }
+
+  @media print {
+    .intercom-lightweight-app {
+      display: none;
+    }
+  }
+</style></div></body></html>

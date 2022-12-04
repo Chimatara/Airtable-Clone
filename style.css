@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav p {
+    text-align: center;
+    font-size: 12px;
+   padding: 5px;
+   background-color: rgb(237, 254, 248);
+}
+.first-head a {
+    color: blue;
+    font-weight: 600;
+}
+.nav {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .1) ;
+    position: fixed;
+    z-index: 1;
+}
+.nav img {
+    /* margin: 5px 0 0 40px; */
+    position: relative;
+    top: 5px;
+    left: 50px;
+}
+.nav-bar ul {
+  display: flex;
+ position: relative;
+ bottom: 30px;
+ left: 150px;
+}
+.nav-bar ul li {
+    list-style-type: none;
+    padding-left: 20px;
+}
+.nav-bar ul li a {
+    text-decoration: none;
+    color: #1b1c1e;
+    font-size: 9px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav-bar ul li a:hover {
+    color: blue;
+}
+.nav-bar-right {
+    float: right;
+    position: relative;
+    bottom: 50px;
+    right: 50px;
+    
+}
+.nav-bar-right a {
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}
+.nav-bar-right button {
+    font-size: 10px;
+    padding: 3px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* STYLE FOR MAIN BODY STARTS HERE */
+.heading {
+    display: flex;
+   
+}
+.head1 {
+    margin: auto;
+    display: flex;
+    position: relative;
+    top: 200px;
+}
+.firstcard {
+    width: 170px;
+    height: 640px;
+    border: 1px solid rgb(211, 210, 210);
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.firstcard p {
+    margin: 10px 0 0 10px;
+}
+.secondp {
+    font-size: 10px;
+    font-weight: 600;
+    padding-top: 8px;
+    padding-bottom: 80px;
+    line-height: 18px;
+}
+.firstcard h2 {
+    font-size: 35px;
+    margin-left: 10px;
+}
+.firstcard button {
+    padding: 10px;
+    width: 90%;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid rgb(52, 52, 52);
+    margin: 40px 0 10px 8px;
+    font-size: 10px;
+    
+}
+.thirdp {
+    font-size: 10px;
+    font-weight: 600;
+    
+}
+.firstcard ul {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-left: 10px;
+    list-style-type: none;
+    margin-top: 10px;
+}
+.firstcard ul li:before {
+    content: "\2714\0020";
+}
+/* SECOND CARD STARTS HERE */
+.secondcard {
+    background-color: rgb(243, 209, 165);
+    width: 170px;
+    height: 640px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.child {
+    display: flex;
+}
+.child h2 {
+   font-size:  35px;
+    margin-left: 10px
+}
+.child p {
+    font-size: 10px;
+    font-weight: 600;
+}
+.secondcard p {
+    font-size: 10px;
+    font-weight: 600;
+    margin: 10px 0 0 10px;
+}
+.secondcard button {
+    padding: 10px;
+    width: 90%;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid rgb(52, 52, 52);
+    margin: 0 0 10px 8px;
+    font-size: 10px;
+}
+.secondcard ul {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-left: 10px;
+    list-style-type: none;
+    margin-top: 10px;
+}
+.secondcard ul li:before {
+    content: "\2714\0020";
+}
+/* THIRD CARD STARTS HERE */
+.thirdcard {
+    margin-top: -38px;
+    background-color: rgb(181, 251, 227);
+    width: 170px;
+    height: 680px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.mostpopular {
+  background-color: blue;
+  height: 40px;
+  border-radius: 8px 8px 0 0;
+  font-size: 12px;
+font-weight: 600;
+color: white; 
+padding: 15px 0 0 15px;
+box-sizing: border-box;
+}
+.thirdcard p {
+    margin: 10px 0 0 15px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 18px;
+}
+.thirdcard button {
+    padding: 10px;
+    width: 90%;
+    border-radius: 20px;
+    background: blue;
+    color: white;
+    border: none;
+    margin: -5px 0 5px 8px;
+    font-size: 10px;
+}
+.thirdcard ul {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-left: 10px;
+    list-style-type: none;
+    margin-top: 10px;
+}
+.thirdcard ul li:before {
+    content: "\2714\0020";
+}
+/* FOURTH CARD STARTS HERE */
+.fourthcard {
+    background-color: #1b1c1e;
+    width: 170px;
+    height: 640px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.fourthcard p {
+    color: white;
+    margin: 10px 0 0 15px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 18px;
+}
+.fourthcard button {
+    padding: 10px;
+    width: 90%;
+    border-radius: 20px;
+    background: white;
+    margin: 88px 0 10px 8px;
+    font-size: 10px;
+}
+.fourthcard ul {
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-left: 10px;
+    list-style-type: none;
+    margin-top: 10px;
+}
+.fourthcard ul li:before {
+    content: "\2714\0020";
+}
+.section2 a {
+    text-decoration: none;
+    position: relative;
+    top: 250px;
+    text-align: center;
+    font-size: 13px;
+    color: #1b1c1e;
+}
+.section2 a:hover {
+    opacity: 0.5;
+}
+.section2 p {
+    position: relative;
+    top: 350px; 
+    opacity: 0.5;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+.image {
+    width: 50%;
+    position: relative;
+    top: 380px; 
+    margin: auto;
+}
+.section4 {
+    position: relative;
+    top: 500px;
+}
+.section4 h4 {
+    text-align: center;
+}
+/* .section4 p {
+    font-size: 8px;
+    margin-top: 10px;
+    font-weight: 600;
+    font-family: roboto;
+    text-align: center ;
+    display: inline;
+} */
+.question-child {
+    display: flex;
+    width: 30%;
+    margin: 20px auto 0 auto;  
+}
+.question-child p {
+    font-size: 8px;
+    font-weight: 800;
+    opacity: 0.5;
+    margin-left: 60px;
+}
+.link-child {
+    display: flex;
+    width: 35%;
+    margin: 0 auto 0 auto; 
+}
+.link-child p {
+    font-size: 10.5px;
+    font-weight: 800;
+    opacity: 0.5;
+    margin-left: 73px;
+}
+.link-child p, a {
+ text-decoration: none;
+ color: blue;
+ margin-top: 5px;
+}
+.section5 h4 {
+    text-align: center;
+    position: relative;
+    top: 560px;
+}
+.table-elements {
+    height: 200px;
+    width: 500px;
+    position: relative;
+    top: 570px;
+    margin: auto;
+}
+.table-elements p {
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.8;
+    padding: 10px 10px 10px 0;
+}
+hr {
+ font-weight: 800;
+ opacity: 0.5;
+}
+/* .product-list {
+    background-color: red; 
+    height: 50px;
+    width: 70%;
+    position: relative;
+    top: 790px;
+    margin: auto;
+    display: flex;
+    
+}
+.section6-img {
+
+  
+}
+.section6-p {
+    margin-right: -50px;
+    font-size: 10px;
+    font-weight: 900;
+    opacity: 0.5;
+}
+
+ .section6-icon {
+    background-color: green; 
+    height: 50px;
+    width: 100px;
+    margin-left: 230px;
+} 
+.section6-icon a {
+    margin-left: 5px;
+    font-size: 10px;
+    font-weight: 800;
+    opacity: 0.5;
+} */
+.mytable {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top: 850px;
+    gap: 100px;
+}
+/* hr {
+    position: relative;
+    top: 800px;
+    color: grey;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    opacity: 0.5;
+} */
+.tableheading {
+    font-weight: 400;
+}
+.mytable {
+    font-size: 10px;
+    line-height: 30px;
+
+}
